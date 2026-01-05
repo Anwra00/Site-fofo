@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Para Nickoly 💞</title>
+
+<style>
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: 
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("https://i.imgur.com/Fmysgpf.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+/* ===== ÍCONE TOPO ===== */
+.top-icon {
+  margin-top: 25px;
+}
+
+.top-icon img {
+  width: 90px;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.6));
+}
+
+/* ===== HEADER ===== */
+header {
+  margin-top: 15px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,0.08);
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 30px;
+  width: 90%;
+  max-width: 540px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+/* ===== TEXTO ===== */
+p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* ===== CORAÇÃO ===== */
+.heart {
+  font-size: 3em;
+  margin-bottom: 15px;
+  animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* ===== BOTÃO ===== */
+button {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 40px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 15px;
+  backdrop-filter: blur(4px);
+}
+
+button:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ===== SECRETO ===== */
+#secreto {
+  display: none;
+}
+
+/* ===== CHUVA ===== */
+.rain {
+  position: fixed;
+  top: -10%;
+  width: 30px;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(120vh);
+    opacity: 0;
+  }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin: 40px 0 20px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+</style>
+
+<script>
+function mostrarMensagem() {
+  document.getElementById("secreto").style.display = "block";
+}
+
+/* Chuva com imagem */
+function criarChuva() {
+  const img = document.createElement("img");
+  img.src = "https://i.imgur.com/VoCVr8Z.png";
+  img.classList.add("rain");
+  img.style.left = Math.random() * 100 + "vw";
+  img.style.animationDuration = (4 + Math.random() * 4) + "s";
+  document.body.appendChild(img);
+
+  setTimeout(() => img.remove(), 8000);
+}
+
+setInterval(criarChuva, 400);
+</script>
+</head>
+
+<body>
+
+<div class="top-icon">
+  <img src="https://i.imgur.com/r3DrXcE.png" alt="Ícone">
+</div>
+
+<header>
+  <h1>Nickoly 💞</h1>
+  <h2>Você é o meu mundo</h2>
+</header>
+
+<div class="card">
+  <div class="heart">💞</div>
+
+  <p>Mor, eu te amo demais. Eu te amo com toda a minha alma e com todo o meu coração. Eu te quero mais que tudo, afinal, você é o meu amor.</p>
+
+  <p>Sinto que quando você está comigo eu tenho tudo: tenho o céu, o mar, as estrelas… tenho o mundo inteiro, porque você é o meu mundo.</p>
+
+  <p>Eu sempre vou estar aqui com você e por você, sempre. Eu te quero a cada dia mais. Saiba que você pode me contar o que quiser; se quiser conversar, eu tô aqui — eu sempre tô.</p>
+
+  <p>Quero poder cuidar de você e te amar todos os dias da minha vida. Quero me dedicar a você, porque você é minha namorada, minha amiga, minha companheira.</p>
+
+  <p>Acima de tudo, quero fazer você feliz, retribuir tudo o que sinto ao seu lado.</p>
+
+  <p>Você é incrível, especial, inteligente, linda… perfeita aos meus olhos.</p>
+
+  <p><strong>Você é tudo o que eu sempre sonhei.  
+  O meu maior sonho.</strong></p>
+
+  <p><strong>EU TE AMO.</strong></p>
+</div>
+
+<button onclick="mostrarMensagem()">Clique aqui 💌</button>
+
+<div id="secreto" class="card">
+  <p>Escolher você é natural.</p>
+  <p>Amar você é inevitável.</p>
+</div>
+
+<footer>
+  Feito com amor ❤️ por Anwar
+</footer>
+
+</body>
+</html>
